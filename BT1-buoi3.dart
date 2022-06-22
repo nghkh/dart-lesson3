@@ -8,24 +8,23 @@ void main() {
 }
 
 extension addMethod on int {
-  int add(int b) {
-    return this + b;
+  dynamic add(int b) {
+    if (this < 0) {
+      print('Số truyền vào phải >= 0');
+    } else {
+      return this + b;
+    }
   }
-}
 
-extension addMethod2 on int {
-  int subtract(int c) {
+  dynamic subtract(int c) {
     return this - c;
   }
-}
-extension addMethod3 on int{
-  double divide(int c){
-    return this /c;
-  }
-}
 
-extension addMethod4 on int{
-  int multiple(int d){
+  dynamic divide(int c) {
+    return this / c;
+  }
+
+  dynamic multiple(int d) {
     return this * d;
   }
 }
